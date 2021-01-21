@@ -391,3 +391,28 @@ img {
         font-weight: bold;
     }
 }
+
+@media (max-width: 800px) {
+
+    #form .form {
+        width: 350px;
+    }
+
+    #email {
+        width: 325px;
+        margin-bottom: 15px;
+    }
+    
+    #message {
+        width: 325px;
+        margin-bottom: 15px;
+    }
+
+    #EmailForm label {
+        align-self: flex-start;
+        font-size: 18pt;
+        margin: 0 0 15px 20px;
+        font-weight: bold;
+    }
+
+}
