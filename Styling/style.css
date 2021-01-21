@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Base styling and variables */
+
+:root {
+    /* Color pallet */
+    --Primary-color: #ff0000;
+    --Background-color: #ddd;
+    --Primary-text: #ffffff;
+    --Link-color: #ffffff;
+    --Success: #00ff00;
+    --SuccessLight: #80ff80;
+    --Confirm: #00ffff;
+    --ConfirmLight: #80ffff;
+
+    /* Positioning */
+
+    --Position-offset-default: 70px;
+    --Position-offset-mobile: 50px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--Background-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+
+/* Utility classes */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+
+}
+
+.btn {
+    background-color: var(--Success);
+    color: #333;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px #333 solid;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.btnblue {
+    background-color: var(--Confirm);
+    color: #333;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px #333 solid;
+    cursor: pointer;
+    margin: 95px 0 10px 0;
+}
+
+.btnblue a {
+    color: #333;
+}
+
+.btn:hover {
+    background-color: var(--SuccessLight);
+}
+
+.btnblue:hover {
+    background-color: var(--ConfirmLight);
+}
+
+.right {
+    text-align: right;
+}
+
+/* Landing area styling */
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Primary-color);
+    justify-content: center;
+    align-items: center;
+}
+
+#landing .flex {
+    flex-direction: column;
+}
+
+.landing h1 {
+    font-size: 78pt;
+    font-weight: bold;
+    color: white;
+}
+
+.landing p {
+    color: var(--Primary-text);
+    margin: 20px 0;
+    font-size: 20pt;
+}
+
+/* Navbar styling */
+
+#nav {
+    width: 100%;
+    height: 70px;
+    background-color: var(--Primary-color);
+    color: var(--Primary-text);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#nav h1, #nav h2 {
+    font-weight: bold;
+}
+
+#nav .container {
+    padding: 0 35px;
+}
+
+/* Confirmation prompt styling */
+
+#confirmation {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0, 0.5);
+}
+
+#confirmation .container {
+    background-color: #ddd;
+    margin:15% auto;
+    width: 650px;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#confirmation .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: red;
+    color: var(--Primary-text);
+    font-size: 20pt;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmation h1 {
+    font-weight: bold;
+    font-size: 30pt;
+    text-align: center;
+    margin-top: 75px;
+}
+
+#confirmation h5 {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 16pt;
+}
+
+
+
+/* Photo header styling */
+
+#photoheader {
+    position: relative;
+    top: var(--Position-offset-default);
+    height: 580px;
+}
+
+#photoheader img {
+    position: static;
+    width: auto;
+}
+
+.photo {
+    background-image: url("/Resources/don.png");
+    background-size: cover;
+}
+
+/* Intro styling*/
+
+#intro {
+    position: relative;
+    top: var(--Position-offset-default);
+    margin-bottom: 250px;
+}
+
+#intro h1 {
+    font-weight: bold;
+    font-size: 30pt;
+    margin-left: 35px;
+}
+
+#intro h5 {
+    font-size: 12pt;
+    margin-bottom: 250px;
+    margin-left: 35px;
+}
+
+#intro h2 {
+    margin: 100px 35px 50px 35px;
+    font-weight: bold;
+}
+
+#intro p {
+    margin: 15px;
+}
+
+/* Form styling */
+
+#form {
+    position: relative;
+    top: var(--Position-offset-default);
+    overflow: visible;
+}
+
+#form .container {
+    justify-content: center;
+    overflow: visible;
+}
+
+#form .form {
+    width: 500px;
+    background-color: #ccc;
+    min-height: 600px;
+    margin-bottom: 125px;
+    border-radius: 15px;
+    box-shadow: #333 1px 1px 10px, #333 -1px -1px 10px;
+}
+
+#EmailForm {
+    margin: 0px 50px;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+#EmailForm h1 {
+    margin: 25px;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+#EmailForm label {
+    align-self: flex-start;
+    font-size: 18pt;
+    margin: 0 0 15px 50px;
+    font-weight: bold;
+}
+
+#EmailForm p {
+    margin: 45px 50px
+}
+
+#email {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+#message {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+
+/* @media (max-width: 1500px) {
+    #photoheader {
+        height: 500px;
+    }
+
+    #photoheader img {
+        max-width: 1500px;
+    }
+
+} */
+
+@media (max-width: 1250px) {
+    :root {
+
+    }
+
+    #photoheader {
+        height: 500px;
+    }
+
+    #form .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #photoheader {
+        height: 400px;
+    }
+
+    #nav .flex {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav h2 {
+        display:none;
+    }
+
+    #intro {
+        text-align: center;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    #form .form {
+        width: 400px;
+    }
+
+    #email {
+        width: 375px;
+        margin-bottom: 15px;
+    }
+    
+    #message {
+        width: 375px;
+        margin-bottom: 15px;
+    }
+
+    #EmailForm label {
+        align-self: flex-start;
+        font-size: 18pt;
+        margin: 0 0 15px 20px;
+        font-weight: bold;
+    }
+}
