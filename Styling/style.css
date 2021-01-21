@@ -217,14 +217,8 @@ img {
     height: 580px;
 }
 
-#photoheader img {
-    position: static;
-    width: auto;
-}
-
 .photo {
     background-image: url("/Resources/don.png");
-    background-size: cover;
 }
 
 /* Intro styling*/
@@ -327,6 +321,14 @@ img {
 
 } */
 
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1100px;
+    }
+
+
+}
+
 @media (max-width: 1250px) {
     :root {
 
@@ -344,7 +346,11 @@ img {
 @media (max-width: 1100px) {
 
     #photoheader {
-        height: 400px;
+        display: none;
+    }
+
+    #photoheader img {
+        width: 100%;
     }
 
     #nav .flex {
